@@ -154,7 +154,7 @@ svg {
 }
 
 body {
-    font-weight: var(--fw-400);
+    font-weight: 400;
     font-family: "Arial", sans-sarif;
     color: var(--col-txt-black);
     font-size: var(--21px);
@@ -177,25 +177,23 @@ body {
     color: var(--col-title);
     font-size: var(--16px);
     cursor: pointer;
-    transition: ease 200ms all;
+    transition: all 400ms ease-in-out;
 
     &:hover {
-        border: double var(--col-txt-white);
+        opacity: .8;
+        
 
 
     }
     &:focus {
-        background: var(--btn-green-100);
+        border: 1px solid green;
 
     }
 
 
     &:active {
-        background: var(--btn-green-60);
-        transform: scale(.9);
+     opacity: 1;
     }
-
-
 
 }
 
