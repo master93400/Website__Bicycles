@@ -1,0 +1,210 @@
+@import "https://unpkg.com/open-props";
+@import "./assets/css/reset.css";
+@import "./assets/css/header.css";
+@import "./assets/css/hero.css";
+@import "./assets/css/about.css";
+
+
+/* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+    /*font-size*/
+    --5px: 0.313rem;
+    --10px: 0.625rem;
+    --14px: 0.875rem;
+    --15px: 0.938rem;
+    --16px: 1rem;
+    --18px: 1.125rem;
+    --20px: 1.25rem;
+    --21px: 1.313rem;
+    --24px: 1.5rem;
+    --30px: 1.875rem;
+    --32px: 2rem;
+    --34px: 2.125rem;
+    --40px: 2.5rem;
+    --45px: 2.813rem;
+    --50px: 3.125rem;
+    --75px: 4.688rem;
+    --100px: 6.25rem;
+    --270px: 16.875rem;
+    --300px: 18.75rem;
+    --320px: 20rem;
+    --576px: 36rem;
+    --600px: 37.5rem;
+    --768px: 48rem;
+    --800px: 50rem;
+    --992px: 62rem;
+    --1000px: 62.5rem;
+    --1100px: 68.75rem;
+    --1170px: 73.125rem;
+    --1200px: 75rem;
+    --1400px: 87.5rem;
+    --1400px: 90rem;
+    /*background-color*/
+    --bg-header: rgb(38, 50, 56);
+    --bg-body: rgb(245, 245, 245);
+    --bg-footer: rgb(227, 227, 227);
+    --bg-black: rgba(0, 0, 0, 0.5);
+    --btn-green-100: rgb(163, 210, 0);
+    --btn-green-90: rgb(185, 239, 0);
+    --btn-green-80: rgb(186, 239, 0);
+    --btn-green-70: rgb(163, 210, 0);
+    --btn-green-60: rgb(217, 255, 86);
+    --col-title: rgb(38, 50, 56);
+    --col-txt-black: rgb(0, 0, 0);
+    --col-txt-gray: rgb(38, 50, 56);
+    --col-txt-white: rgb(255, 255, 255);
+    --col-txt-gray-light: rgb(108, 108, 108);
+
+    /*clamp*/
+    --clamp-34px: clamp(1.75rem, 10vw, 2.125rem);
+    --clamp-21px: clamp(0.875rem, 10vw, 1.313rem);
+    --clamp-21px: clamp(1rem, 10vw, 1.313rem);
+    --clamp-18px: clamp(0.875rem, 10vw, 1.125rem);
+
+    --clamp-34-28px: clamp(1.75rem, 1.614rem + 0.68vw, 2.125rem);
+    --clamp-21-14px: clamp(0.875rem, 0.716rem + 0.8vw, 1.313rem);
+    --clamp-21-16px: clamp(1rem, 0.886rem + 0.57vw, 1.313rem);
+    --clamp-18-14px: clamp 0.875rem, 0.784rem + 0.45vw, 1.125rem);
+
+    --font-size-fluid-0: clamp(.75rem, 2vw, 1rem);
+    --font-size-fluid-1: clamp(1rem, 4vw, 1.5rem);
+    --font-size-fluid-2: clamp(1.5rem, 6vw, 2.5rem);
+    --font-size-fluid-3: clamp(2rem, 9vw, 3.5rem);
+    --font-size-fluid-4: clamp(1.5rem, 6vw, 2.813rem);
+
+    /* margin-rem */
+
+    --size-fluid-1: clamp(.5rem, 1vw, 1rem);
+    --size-fluid-2: clamp(1rem, 2vw, 1.5rem);
+    --size-fluid-3: clamp(1.5rem, 3vw, 2rem);
+    --size-fluid-4: clamp(2rem, 4vw, 3rem);
+    --size-fluid-5: clamp(4rem, 5vw, 5rem);
+    --size-fluid-6: clamp(5rem, 7vw, 7.5rem);
+    --size-fluid-7: clamp(7.5rem, 10vw, 10rem);
+    --size-fluid-8: clamp(10rem, 20vw, 15rem);
+    --size-fluid-9: clamp(15rem, 30vw, 20rem);
+    --size-fluid-10: clamp(20rem, 40vw, 30rem);
+
+    /*   padding-rem      */
+    --size-000: -.5rem;
+    --size-00: -.25rem;
+    --size-1: .25rem;
+    --size-2: .5rem;
+    --size-3: 1rem;
+    --size-4: 1.25rem;
+    --size-5: 1.5rem;
+    --size-6: 1.75rem;
+    --size-7: 2rem;
+    --size-8: 3rem;
+    --size-9: 4rem;
+    --size-10: 5rem;
+    --size-11: 7.5rem;
+    --size-12: 10rem;
+    --size-13: 15rem;
+    --size-14: 20rem;
+    --size-15: 30rem;
+
+    /* padding-px  */
+    --size-px-000: -8px;
+    --size-px-00: -4px;
+    --size-px-1: 4px;
+    --size-px-2: 8px;
+    --size-px-3: 16px;
+    --size-px-4: 20px;
+    --size-px-5: 24px;
+    --size-px-6: 28px;
+    --size-px-7: 32px;
+    --size-px-8: 48px;
+    --size-px-9: 64px;
+    --size-px-10: 80px;
+    --size-px-11: 120px;
+    --size-px-12: 160px;
+    --size-px-13: 240px;
+    --size-px-14: 320px;
+    --size-px-15: 480px;
+
+    --font-weight-1: 100;
+    --font-weight-2: 200;
+    --font-weight-3: 300;
+    --font-weight-4: 400;
+    --font-weight-5: 500;
+    --font-weight-6: 600;
+    --font-weight-7: 700;
+    --font-weight-8: 800;
+    --font-weight-9: 900;
+
+
+    /*font-width*/
+
+    --fw-400: 400;
+    --fw-700: 700;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+svg {
+    margin: 0;
+}
+
+body {
+    font-weight: var(--fw-400);
+    font-family: "Arial", sans-sarif;
+    color: var(--col-txt-black);
+    font-size: var(--21px);
+
+}
+
+.wrapper {
+    max-width: clamp(var(--320px), 90%, var(--1200px));
+    padding: var(--16px);
+    margin-inline: auto;
+
+}
+
+.button {
+    display: inline-block;
+    border: none;
+    padding: 0.688rem 2.938rem;
+    background: var(--btn-green-90);
+    border-radius: 12px;
+    color: var(--col-title);
+    font-size: var(--16px);
+    cursor: pointer;
+    transition: ease 200ms all;
+
+    &:hover {
+        border: double var(--col-txt-white);
+
+
+    }
+    &:focus {
+        background: var(--btn-green-100);
+
+    }
+
+
+    &:active {
+        background: var(--btn-green-60);
+        transform: scale(.9);
+    }
+
+
+
+}
+
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-footer);
+    padding-block: 30px;
+
+}
